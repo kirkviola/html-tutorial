@@ -1,0 +1,23 @@
+body {
+    font: normal normal normal 16pt/19.2pt Georgia, Times New Roman, serif
+}
+header {font-size: 1.25em;}
+
+/* Hash sign indicates id value */
+/* Commas separate multiple id values to impact */
+
+.italic {
+    font-style: italic;
+}
+.marginSpace {
+    margin: 30px 0;
+}
+.underline {
+    text-decoration: underline;
+}
+.centerText {
+    text-align: center;
+}
+.colorBlue {
+    color:royalblue;
+}

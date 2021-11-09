@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link href="css/my-cv.css" rel="stylesheet">
 </head>
 <body>
     <div>
-        <h1>Personal Information</h1>
-        <span>Matthew Kirkendall</span>
-        <span>|</span>
+        <h1 id="myHeader" class="underline">Personal Information</h1>
+        <p class="colorBlue">Matthew Kirkendall</p>
         <span>9212 Deercross pwky apt. 3D</span>
         <span>|</span>
         <span>513-504-6671</span>
@@ -20,8 +19,11 @@
     </div>
 
     <div>
-        <h1>Technology</h1>
-        <table>
+        
+        <table class="technology marginSpace centerText">
+            <tr>
+                <th colspan="4" class="magnify150 underline">Technology</th>
+            </tr>
             <tr>
                 <td>Github</td>
                 <td>SQL Server</td>
@@ -44,31 +46,31 @@
     </div>
 
     <div>
-        <h1>Work Experience</h1>
+        <h1 class="underline">Work Experience</h1>
 
         <h3>Orchestra Director</h3>
         <span>Fairfield City Schools |</span>
-        <span>3 Years </span>
+        <span>2018 - 2021 </span>
         <ul>
-            <li>Successfully lead direction for orchestra students grades 6-8.</li>
-            <li>Auditioned, directed, and lead the Select Orchestra in performances and competitions.</li>
+            <li class="italic">Successfully lead direction for orchestra students grades 6-8.</li>
+            <li class="italic">Auditioned, directed, and lead the Select Orchestra in performances and competitions.</li>
 
         </ul>
         <br>
         <h3>Orchestra Director</h3>
         <span>Hamilton City Schools |</span>
-        <span>3 years</span>
+        <span>2015 - 2018</span>
         <ul>
-            <li>Successfully lead and assisted instruction grades 5-12.</li>
-            <li>Assisted with high school musical pit orchestra.</li>
-            <li>Directed and assisted the Livewire electric orchestra.</li>
+            <li class="italic">Successfully lead and assisted instruction grades 5-12.</li>
+            <li class="italic">Assisted with high school musical pit orchestra.</li>
+            <li class="italic">Directed and assisted the Livewire electric orchestra.</li>
         </ul>
     </div>
 
     <div>
-        <h1>Education</h1>
+        <h1 class="underline">Education</h1>
 
-        <h3>University of Cincinnati</h3>
+        <h3 class="colorBlue">University of Cincinnati</h3>
         <ul>
 
             <li>Bachelor of Music Music Education</li>
@@ -76,7 +78,7 @@
             <li>2014</li>
         </ul>
         <br>
-        <h3>Sycamore High School</h3>
+        <h3 class="colorBlue">Sycamore High School</h3>
         <ul>
             <li>High School deploma</li>
             <li>2010</li>
