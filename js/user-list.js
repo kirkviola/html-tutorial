@@ -56,6 +56,7 @@ const loaded = () => {
         tr += `<td>${data.email}</td>`;
         tr += `<td>${yesOrNo(data.isReviewer)}</td>`;
         tr += `<td>${yesOrNo(data.isAdmin)}</td>`;
+        tr += `<td><a href="user-detail.html?id=${data.id}">Detail</a> | <a href="user-edit.html?id=${data.id}">Edit</a></td>`;
         tr += "</tr>";
         tbody.innerHTML += tr;
     }
