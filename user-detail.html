@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Detail</title>
     <script src="js/user-detail.js"></script>
+    <script src="js/user-utility.js"></script>
 </head>
-<body onload="loaded()">
+<body onload="getUserByPk()">
     <a href="user-list.html">Back to user list</a>
     <table>
         <tr>
@@ -54,5 +55,6 @@
         </tr>
         
     </table>
+    <button onclick="remove()">Delete</button>
 </body>
 </html>

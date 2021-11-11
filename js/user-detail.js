@@ -1,15 +1,6 @@
-;
-let user = {
-    id: 1,
-    username: "kirk.viola",
-    password: "aBcD",
-    firstname: "Matthew",
-    lastname: "Kirkendall",
-    phone: "555-5555",
-    email: "vla.com",
-    isReviewer: true,
-    isAdmin: true,
-}
+
+let user = {}
+
 
 const loaded = () => {
     document.getElementById("xid").value = user.id;
@@ -22,6 +13,19 @@ const loaded = () => {
     document.getElementById("xadmin").value = yesOrNo(user.isAdmin);
 }
 
-const yesOrNo = (bool) => { // describing type is wise
-    return bool ? "Ja" : "Nein";        
-} // Duplicated; will be replaced later
+const getUserByPk = () => {
+    let id = getUrlId();
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", `http://localhost:31326/api/users/${id}`, true);
+    xhr.onload = () =>{
+        user = xhr.response;
+        loaded();
+    }
+    xhr.send();
+}
+
+const remove = () => {
+    console.log("Delete user ...");
+
+}

@@ -1,50 +1,16 @@
-let users = [
-    {
-        id: 1,
-        username: "kirk.viola",
-        password: "aBcD",
-        firstname: "Matthew",
-        lastname: "Kirkendall",
-        phone: "555-5555",
-        email: "vla.com",
-        isReviewer: true,
-        isAdmin: true,
-    },
-    {
-        id: 4,
-        username: "butter",
-        password: "bro",
-        firstname: "James",
-        lastname: "Butterworth",
-        phone: "111-1111",
-        email: "wow.com",
-        isReviewer: false,
-        isAdmin: false,
-    },
-    {
-        id: 5,
-        username: "cadmus",
-        password: "bad",
-        firstname: "Terry",
-        lastname: "Jones",
-        phone: "222-2222",
-        email: "python.org",
-        isReviewer: false,
-        isAdmin: false,
-    },
-    {
-        id: 6,
-        username: "todd",
-        password: "tucker",
-        firstname: "todd",
-        lastname: "tucker",
-        phone: "123-4567",
-        email: "person@email.com",
-        isReviewer: false,
-        isAdmin: false,
+let users = [];
+
+const getAllUsers = () => {
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("GET", "http://localhost:31326/api/users", true);
+    xhr.onload = () => {
+        users = xhr.response;
+        loaded(users);
     }
-]
-const loaded = () => {
+    xhr.send();
+}
+const loaded = (users) => {
     let tbody = document.getElementById("data"); // stores the element to be modified
     tbody.innerHTML = ""; // clears tag for a refresh; prevents duplication
     for(let data of users){
@@ -62,6 +28,4 @@ const loaded = () => {
     }
 }
 
-const yesOrNo = (bool) => { // describing type is wise
-        return bool ? "Ja" : "Nein";        
-}
+
