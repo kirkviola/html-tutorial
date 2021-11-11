@@ -6,8 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/my-cv.css" rel="stylesheet">
+    <script lang="javascript">
+        const welcome = () => {
+            console.log("Welcome to my CV!");
+        }
+        const button_click = () => {
+            console.log("The button was clicked!");
+            let ctrl = document.getElementById("name");
+            let value = ctrl.value;
+            alert(`Hello to you, ${value}`);
+        }
+    </script>
 </head>
-<body>
+<body onload="welcome()">
+    <div>
+        <label>Enter your name: </label>
+        <input type="text" id="name">
+        <button onclick="button_click()">Click me!</button>
+    </div>
     <div>
         <h1 id="myHeader" class="underline">Personal Information</h1>
         <p class="colorBlue">Matthew Kirkendall</p>
