@@ -1,4 +1,5 @@
 $().ready(() => {
+    $("input").css("border-radius", "7px");
     getProductByPk();
 });
 
@@ -9,6 +10,7 @@ const loaded = (product) => {
     $("#xname").val(product.name);
     $("#xprice").val(product.price);
     $("#xunit").val(product.unit);
+    $("#xvendor").val(product.vendor.name);
 }
 
 const getProductByPk = () => {
