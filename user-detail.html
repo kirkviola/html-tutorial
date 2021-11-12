@@ -12,48 +12,60 @@
     <a href="user-list.html">Back to user list</a>
     <table>
         <tr>
-            <td>Id
-                <input id="xid" type="text" size="10" disabled="true">
+            <td>Id</td>
+            <td>
+                <input id="xid" type="text" size="10" value="0" disabled>
             </td>
         </tr>
         <tr>
-
-            <td>Username
-                <input id="xusername" type="text" size="30" disabled="true">
+            <td>Username</td>
+            <td>
+                <input id="xusername" type="text" size="30" >
             </td>
         </tr>
         <tr>
-
-            <td>Firstname
-                <input id="xfname" type="text" size="30" disabled="true">
+            <td>Password</td>
+            <td>
+                <input id="xpassword" type="password" size="20">
+                <input id="xpassword2" type="password" size="20" onblur="checkpswd()">
+            </td>            
+        </tr>
+        <tr>
+            <td>Firstname</td>
+            <td>
+                <input id="xfname" type="text" size="30" >
             </td>
         </tr>
         <tr>
-            <td>Lastname
-                <input id="xlname" type="text" size="30" disabled="true">
+            <td>Lastname</td>
+            <td>
+                <input id="xlname" type="text" size="30" >
             </td>
         </tr>
         <tr>
-            <td>Phone
-                <input id="xphone" type="text" size="10" disabled="true">
+            <td>Phone</td>
+            <td>
+                <input id="xphone" type="text" size="10" >
             </td>
         </tr>
         <tr>
-            <td>Email
-                <input id="xemail" type="text" size="40" disabled="true">
+            <td>Email</td>
+            <td>
+                <input id="xemail" type="text" size="40" >
             </td>
         </tr>
         <tr>
-            <td>Reviewer
-                <input id="xreviewer" type="text" size="10" disabled="true">
+            <td>Is Reviewer</td>
+            <td>
+                <input id="xreviewer" type="checkbox" size="10" >
             </td>
         </tr>
         <tr>
-            <td>Admin
-                <input id="xadmin" type="text" size="10" disabled="true">
+            <td>Is Admin</td>
+            <td>
+                <input id="xadmin" type="checkbox" size="10" >
             </td>
-        </tr>
-        
+        </tr>       
     </table>
     <button onclick="remove()">Delete</button>
 </body>
